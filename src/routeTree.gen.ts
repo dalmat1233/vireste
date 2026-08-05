@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as DocsRouteImport } from './routes/docs'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AppRouteImport } from './routes/app'
@@ -29,6 +30,11 @@ import { Route as AppAnalyticsRouteImport } from './routes/app.analytics'
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PricingRoute = PricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DocsRoute = DocsRouteImport.update({
@@ -114,6 +120,7 @@ export interface FileRoutesByFullPath {
   '/app': typeof AppRouteWithChildren
   '/auth': typeof AuthRoute
   '/docs': typeof DocsRoute
+  '/pricing': typeof PricingRoute
   '/services': typeof ServicesRoute
   '/app/analytics': typeof AppAnalyticsRoute
   '/app/dashboard': typeof AppDashboardRoute
@@ -131,6 +138,7 @@ export interface FileRoutesByTo {
   '/accept-invite': typeof AcceptInviteRoute
   '/auth': typeof AuthRoute
   '/docs': typeof DocsRoute
+  '/pricing': typeof PricingRoute
   '/services': typeof ServicesRoute
   '/app/analytics': typeof AppAnalyticsRoute
   '/app/dashboard': typeof AppDashboardRoute
@@ -150,6 +158,7 @@ export interface FileRoutesById {
   '/app': typeof AppRouteWithChildren
   '/auth': typeof AuthRoute
   '/docs': typeof DocsRoute
+  '/pricing': typeof PricingRoute
   '/services': typeof ServicesRoute
   '/app/analytics': typeof AppAnalyticsRoute
   '/app/dashboard': typeof AppDashboardRoute
@@ -170,6 +179,7 @@ export interface FileRouteTypes {
     | '/app'
     | '/auth'
     | '/docs'
+    | '/pricing'
     | '/services'
     | '/app/analytics'
     | '/app/dashboard'
@@ -187,6 +197,7 @@ export interface FileRouteTypes {
     | '/accept-invite'
     | '/auth'
     | '/docs'
+    | '/pricing'
     | '/services'
     | '/app/analytics'
     | '/app/dashboard'
@@ -205,6 +216,7 @@ export interface FileRouteTypes {
     | '/app'
     | '/auth'
     | '/docs'
+    | '/pricing'
     | '/services'
     | '/app/analytics'
     | '/app/dashboard'
@@ -224,6 +236,7 @@ export interface RootRouteChildren {
   AppRoute: typeof AppRouteWithChildren
   AuthRoute: typeof AuthRoute
   DocsRoute: typeof DocsRoute
+  PricingRoute: typeof PricingRoute
   ServicesRoute: typeof ServicesRoute
 }
 
@@ -234,6 +247,13 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pricing': {
+      id: '/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof PricingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/docs': {
@@ -377,6 +397,7 @@ const rootRouteChildren: RootRouteChildren = {
   AppRoute: AppRouteWithChildren,
   AuthRoute: AuthRoute,
   DocsRoute: DocsRoute,
+  PricingRoute: PricingRoute,
   ServicesRoute: ServicesRoute,
 }
 export const routeTree = rootRouteImport
