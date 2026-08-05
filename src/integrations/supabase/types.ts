@@ -67,6 +67,42 @@ export type Database = {
           },
         ]
       }
+      leads: {
+        Row: {
+          budget: string | null
+          company: string | null
+          created_at: string
+          email: string
+          goals: string | null
+          id: string
+          lead_type: string
+          name: string
+          website: string | null
+        }
+        Insert: {
+          budget?: string | null
+          company?: string | null
+          created_at?: string
+          email: string
+          goals?: string | null
+          id?: string
+          lead_type?: string
+          name: string
+          website?: string | null
+        }
+        Update: {
+          budget?: string | null
+          company?: string | null
+          created_at?: string
+          email?: string
+          goals?: string | null
+          id?: string
+          lead_type?: string
+          name?: string
+          website?: string | null
+        }
+        Relationships: []
+      }
       org_invites: {
         Row: {
           accepted_at: string | null
