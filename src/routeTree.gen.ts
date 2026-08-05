@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as DocsRouteImport } from './routes/docs'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AppRouteImport } from './routes/app'
 import { Route as AcceptInviteRouteImport } from './routes/accept-invite'
@@ -40,6 +41,11 @@ const PricingRoute = PricingRouteImport.update({
 const DocsRoute = DocsRouteImport.update({
   id: '/docs',
   path: '/docs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AuthRoute = AuthRouteImport.update({
@@ -119,6 +125,7 @@ export interface FileRoutesByFullPath {
   '/accept-invite': typeof AcceptInviteRoute
   '/app': typeof AppRouteWithChildren
   '/auth': typeof AuthRoute
+  '/contact': typeof ContactRoute
   '/docs': typeof DocsRoute
   '/pricing': typeof PricingRoute
   '/services': typeof ServicesRoute
@@ -137,6 +144,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/accept-invite': typeof AcceptInviteRoute
   '/auth': typeof AuthRoute
+  '/contact': typeof ContactRoute
   '/docs': typeof DocsRoute
   '/pricing': typeof PricingRoute
   '/services': typeof ServicesRoute
@@ -157,6 +165,7 @@ export interface FileRoutesById {
   '/accept-invite': typeof AcceptInviteRoute
   '/app': typeof AppRouteWithChildren
   '/auth': typeof AuthRoute
+  '/contact': typeof ContactRoute
   '/docs': typeof DocsRoute
   '/pricing': typeof PricingRoute
   '/services': typeof ServicesRoute
@@ -178,6 +187,7 @@ export interface FileRouteTypes {
     | '/accept-invite'
     | '/app'
     | '/auth'
+    | '/contact'
     | '/docs'
     | '/pricing'
     | '/services'
@@ -196,6 +206,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/accept-invite'
     | '/auth'
+    | '/contact'
     | '/docs'
     | '/pricing'
     | '/services'
@@ -215,6 +226,7 @@ export interface FileRouteTypes {
     | '/accept-invite'
     | '/app'
     | '/auth'
+    | '/contact'
     | '/docs'
     | '/pricing'
     | '/services'
@@ -235,6 +247,7 @@ export interface RootRouteChildren {
   AcceptInviteRoute: typeof AcceptInviteRoute
   AppRoute: typeof AppRouteWithChildren
   AuthRoute: typeof AuthRoute
+  ContactRoute: typeof ContactRoute
   DocsRoute: typeof DocsRoute
   PricingRoute: typeof PricingRoute
   ServicesRoute: typeof ServicesRoute
@@ -261,6 +274,13 @@ declare module '@tanstack/react-router' {
       path: '/docs'
       fullPath: '/docs'
       preLoaderRoute: typeof DocsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/auth': {
@@ -396,6 +416,7 @@ const rootRouteChildren: RootRouteChildren = {
   AcceptInviteRoute: AcceptInviteRoute,
   AppRoute: AppRouteWithChildren,
   AuthRoute: AuthRoute,
+  ContactRoute: ContactRoute,
   DocsRoute: DocsRoute,
   PricingRoute: PricingRoute,
   ServicesRoute: ServicesRoute,
