@@ -9,7 +9,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Vireste is a new influencer marketing agency built around creator fit, strategy and authentic partnerships for health, wellness and human performance brands.",
+          "Vireste is a modern influencer marketing agency built around creator fit, strategy and authentic partnerships for technology and innovation brands.",
       },
       { property: "og:title", content: "About Vireste" },
       {
@@ -115,12 +115,12 @@ function About() {
           <div>
             <SectionLabel>For creators</SectionLabel>
             <h2 className="mt-7 font-display text-2xl leading-tight font-bold sm:text-3xl">
-              Working in health, wellness or performance?
+              Built for technology brands shaping the future.
             </h2>
-            <p className="mt-5 text-base leading-relaxed text-ink-muted">
-              We're building a network of creators we can bring the right brands to. If your
-              content sits in this space and you care about who you partner with, introduce
-              yourself.
+            <p className="mt-5 whitespace-pre-line text-base leading-relaxed text-ink-muted">
+              We help technology companies reach the right audiences by partnering them with creators who understand their products, influence their communities, and turn complex innovations into meaningful conversations.
+              {"\n\n"}
+              In technology, credibility is everything. The right creator does more than generate awareness — they educate, build trust, and help audiences understand why a product matters. Our expertise allows us to identify influencers who combine relevance, authority, and genuine impact.
             </p>
             <Link
               to="/contact"

@@ -79,7 +79,7 @@ function Pricing() {
             Three ways to work together.
           </h1>
           <p className="mt-7 max-w-2xl text-lg leading-relaxed text-ink-muted">
-            Every brand's scope is different, so we quote per engagement rather than publishing
+            Every technology brand has different needs, so we quote per engagement rather than publishing
             a fixed rate card. Creator fees are always separate and fully transparent — we don't
             take a hidden margin on what creators are paid.
           </p>
