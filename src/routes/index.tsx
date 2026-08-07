@@ -5,17 +5,17 @@ import { SiteShell, SectionLabel } from "@/components/site/shell";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Vireste — Influencer Marketing Agency for Health & Performance Brands" },
+      { title: "Vireste — Influencer Marketing Agency for Technology Brands" },
       {
         name: "description",
         content:
-          "Vireste connects health, wellness, nutrition and human performance brands with creators their audience already trusts. Strategy, creator sourcing and campaign management.",
+          "Vireste connects technology brands with creators who understand their products and influence their communities.",
       },
       { property: "og:title", content: "Vireste — Influencer Marketing Agency" },
       {
         property: "og:description",
         content:
-          "Influence is built on trust. We help brands find the voices that matter — creator sourcing, strategy and campaign management for health and performance brands.",
+          "Influence is built on trust. We help brands find the voices that matter — creator sourcing, strategy and campaign management for technology brands.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
@@ -67,7 +67,7 @@ const PROCESS = [
   { n: "05", title: "Reporting", body: "Performance review, content library, and a clear recommendation for the next cycle." },
 ];
 
-const NICHES = ["Health & Wellness", "Nutrition & Supplements", "Human Performance", "Recovery & Optimization", "Fitness & Lifestyle"];
+const NICHES = ["Technology & Software", "Artificial Intelligence & Automation", "SaaS & Digital Platforms", "Consumer Electronics & Hardware", "Emerging Technologies & Innovation"];
 
 function Home() {
   return (
@@ -180,17 +180,13 @@ function Home() {
             <div>
               <SectionLabel>Our focus</SectionLabel>
               <h2 className="mt-7 font-display text-3xl leading-tight font-bold sm:text-4xl">
-                Built for health, wellness and human performance brands.
+                Connecting technology brands with the voices that matter.{"\n\n"}
               </h2>
               <p className="mt-6 text-base leading-relaxed text-ink-muted">
-                We specialise in health, wellness, nutrition and human performance, connecting
-                brands with creators who have the trust and influence to educate, inspire and
-                impact their communities.
+                We help technology companies reach the right audiences by partnering them with creators who understand their products, influence their communities, and turn complex innovations into meaningful conversations.{"\n\n"}
               </p>
               <p className="mt-4 text-base leading-relaxed text-ink-muted">
-                Specialising matters in this category. Audiences are sceptical, claims are
-                regulated, and credibility is the product. Knowing the space means we can tell
-                the difference between a creator with reach and a creator with authority.
+                In technology, credibility is everything. The right creator does more than generate awareness — they educate, build trust, and help audiences understand why a product matters. Our expertise allows us to identify influencers who combine relevance, authority, and genuine impact.
               </p>
             </div>
             <ul className="flex flex-col justify-center gap-px overflow-hidden rounded-lg border border-ink-border bg-ink-border">
