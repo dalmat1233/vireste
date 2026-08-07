@@ -24,7 +24,7 @@ export const Route = createFileRoute("/contact")({
       {
         property: "og:description",
         content:
-          "Book a strategy call or request a proposal from Vireste, an influencer marketing agency for health and performance brands.",
+          "Book a strategy call or request a proposal from Vireste, an influencer marketing agency for technology and innovation brands.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/contact" },

@@ -78,7 +78,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Vireste — Influencer Marketing Agency" },
-      { name: "description", content: "Vireste connects health, wellness, nutrition and human performance brands with creators their audience already trusts." },
+      { name: "description", content: "Vireste connects technology and innovation brands with creators their audience already trusts." },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Vireste" },
       { name: "twitter:card", content: "summary_large_image" },
