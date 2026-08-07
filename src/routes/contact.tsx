@@ -91,7 +91,7 @@ function Contact() {
     setSubmitting(false);
 
     if (error) {
-      toast.error("Something went wrong sending your enquiry. Please email hello@vireste.com.");
+      toast.error("Something went wrong sending your enquiry. Please email atik@virestehq.com.");
       return;
     }
     setDone(true);
@@ -123,7 +123,7 @@ function Contact() {
               <h2 className="mt-6 font-display text-2xl font-bold">Thanks — we've got it.</h2>
               <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-ink-muted">
                 We'll review your enquiry and reply to the email you gave us. If it's urgent,
-                write to hello@vireste.com directly.
+                write to atik@virestehq.com directly.
               </p>
             </div>
           ) : (
@@ -226,10 +226,10 @@ function Contact() {
             <Mail className="h-5 w-5 text-brand" strokeWidth={1.75} />
             <h2 className="mt-5 font-display text-lg font-semibold">Prefer email?</h2>
             <a
-              href="mailto:hello@vireste.com"
+              href="mailto:atik@virestehq.com"
               className="mt-2 inline-block text-sm text-ink-muted hover:text-ink-foreground"
             >
-              hello@vireste.com
+              atik@virestehq.com
             </a>
           </div>
           <div className="rounded-xl border border-ink-border p-8">
