@@ -15,7 +15,7 @@ export const Route = createFileRoute("/services")({
       {
         property: "og:description",
         content:
-          "Influencer sourcing, campaign strategy, outreach, content direction, partnership management and reporting for health and performance brands.",
+          "Influencer sourcing, campaign strategy, outreach, content direction, partnership management and reporting for technology and innovation brands.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/services" },
