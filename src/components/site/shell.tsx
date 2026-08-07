@@ -83,8 +83,8 @@ export function SiteFooter() {
           <div>
             <LogoMark className="h-9 w-9" />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-ink-muted">
-              An influencer marketing agency connecting health, wellness and human
-              performance brands with creators their audience already trusts.
+              An influencer marketing agency connecting technology and innovation brands
+              with creators their audience already trusts.
             </p>
           </div>
 
@@ -102,18 +102,13 @@ export function SiteFooter() {
             <p className="rule-label text-ink-muted">Contact</p>
             <ul className="mt-4 space-y-2.5 text-sm">
               <li>
-                <a href="mailto:hello@vireste.com" className="text-ink-muted hover:text-ink-foreground">
-                  hello@vireste.com
+                <a href="mailto:atik@virestehq.com" className="text-ink-muted hover:text-ink-foreground">
+                  atik@virestehq.com
                 </a>
               </li>
               <li>
-                <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="text-ink-muted hover:text-ink-foreground">
-                  Instagram
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" className="text-ink-muted hover:text-ink-foreground">
-                  LinkedIn
+                <a href="https://x.com/virestehq" target="_blank" rel="noreferrer" className="text-ink-muted hover:text-ink-foreground">
+                  X (Twitter)
                 </a>
               </li>
             </ul>
