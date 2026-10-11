@@ -102,8 +102,8 @@ export function SiteFooter() {
             <p className="rule-label text-ink-muted">Contact</p>
             <ul className="mt-4 space-y-2.5 text-sm">
               <li>
-                <a href="mailto:atik@virestehq.com" className="text-ink-muted hover:text-ink-foreground">
-                  atik@virestehq.com
+                <a href="mailto:contact@virestehq.com" className="text-ink-muted hover:text-ink-foreground">
+                  contact@virestehq.com
                 </a>
               </li>
             </ul>
